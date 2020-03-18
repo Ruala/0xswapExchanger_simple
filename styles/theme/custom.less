@@ -229,13 +229,32 @@
   &__name {
     display: flex;
     align-items: center;
+    position: relative;
     min-width: 120px;
     max-width: 100%;
     height: @global-control-height;
-    padding: 10px;
+    padding: 10px 20px 10px 10px;
     border: 1px solid @global-border;
     border-radius: 10px;
     box-sizing: border-box;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      width: 3px;
+      height: 3px;
+      border-right: 1px solid;
+      border-bottom: 1px solid;
+      transform: rotate(45deg);
+      transition: transform 0.2s linear;
+    }
+
+    &.uk-open::before {
+      transform: rotate(225deg);
+    }
   }
 
   &__search {
