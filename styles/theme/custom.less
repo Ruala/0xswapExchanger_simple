@@ -229,38 +229,45 @@
   &__name {
     display: flex;
     align-items: center;
-  }
-
-  .select2 {
     min-width: 120px;
     max-width: 100%;
-  }
-
-  .select2-container .select2-selection--single {
     height: @global-control-height;
-    border-color: @global-border;
+    padding: 10px;
+    border: 1px solid @global-border;
     border-radius: 10px;
+    box-sizing: border-box;
   }
 
-  .select2-container--default .select2-selection--single .select2-selection__rendered {
-    line-height: @global-control-height;
+  &__search {
+    color: inherit;
+    background-color: transparent;
+    border-color: @global-primary-background;
   }
 
-  .select2-container--default .select2-selection--single .select2-selection__arrow {
-    height: calc(@global-control-height - 2px);
+  &__list {
+
+    > li {
+      display: flex;
+      align-items: center;
+      padding: 5px 10px;
+
+      &:not(.search-wrap) {
+        cursor: pointer;
+
+        &:hover {
+          color: #fff;
+          background-color: @global-primary-background;
+        }
+      }
+    }
+
+    > .uk-active {
+      background-color: #ddd;
+    }
   }
 }
 
-.select2-dropdown {
-  border-color: @global-border;
-  border-radius: 10px;
-}
 
-.select2-container--default .select2-search--dropdown .select2-search__field {
-  color: inherit;
-  background-color: transparent;
-  border-color: @global-primary-background;
-}
 
 .uk-light {
 
@@ -301,28 +308,29 @@
       }
     }
 
-    .select2-container .select2-selection--single,
-    .select2-container--default .select2-selection--single .select2-selection__rendered {
-      color: @inverse-global-color;
-    }
-
-    .select2-container .select2-selection--single {
+    &__name {
       background-color: #444;
       border-color: #333;
     }
-  }
 
-  .select2-dropdown {
-    background-color: #444;
-    border-color: #333;
-  }
+    &__search {
+      color: inherit;
+      background-color: transparent;
+      border-color: @global-primary-background;
+    }
 
-  .select2-container--default .select2-results__option[aria-selected=true] {
-    background-color: @global-secondary-background;
-  }
+    &__list {
 
-  .select2-container--default .select2-search--dropdown .select2-search__field {
-    border-color: @global-primary-background;
+      > .uk-active {
+        background-color: @global-secondary-background;
+      }
+    }
+
+    .uk-dropdown {
+      color: @inverse-global-color;
+      background: #444;
+      border-color: #333;
+    }
   }
 
  .uk-button-primary:disabled {

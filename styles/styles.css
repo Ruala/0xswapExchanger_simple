@@ -764,7 +764,7 @@ a.uk-link-reset,
  */
 .uk-list > li:nth-child(n+2),
 .uk-list > li > ul {
-  margin-top: 5px;
+  margin-top: 0;
 }
 /* Style modifiers
  ========================================================================== */
@@ -5023,11 +5023,14 @@ ul.uk-nav-sub {
   z-index: 1020;
   /* 3 */
   box-sizing: border-box;
-  min-width: 200px;
+  min-width: 100%;
   /* 4 */
-  padding: 15px;
-  background: #f8f8f8;
+  padding: 0;
+  background: #fff;
   color: #666;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #e5e5e5;
   box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
 }
 /* Show */
@@ -12607,30 +12610,33 @@ iframe.uk-cover {
 .exchange__name {
   display: flex;
   align-items: center;
-}
-.exchange .select2 {
   min-width: 120px;
   max-width: 100%;
-}
-.exchange .select2-container .select2-selection--single {
   height: 40px;
-  border-color: #e5e5e5;
+  padding: 10px;
+  border: 1px solid #e5e5e5;
   border-radius: 10px;
+  box-sizing: border-box;
 }
-.exchange .select2-container--default .select2-selection--single .select2-selection__rendered {
-  line-height: 40px;
-}
-.exchange .select2-container--default .select2-selection--single .select2-selection__arrow {
-  height: calc(40px - 2px);
-}
-.select2-dropdown {
-  border-color: #e5e5e5;
-  border-radius: 10px;
-}
-.select2-container--default .select2-search--dropdown .select2-search__field {
+.exchange__search {
   color: inherit;
   background-color: transparent;
   border-color: #1e87f0;
+}
+.exchange__list > li {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+}
+.exchange__list > li:not(.search-wrap) {
+  cursor: pointer;
+}
+.exchange__list > li:not(.search-wrap):hover {
+  color: #fff;
+  background-color: #1e87f0;
+}
+.exchange__list > .uk-active {
+  background-color: #ddd;
 }
 .uk-light .uk-alert-success,
 .uk-section-primary:not(.uk-preserve-color) .uk-alert-success,
@@ -12761,83 +12767,62 @@ iframe.uk-cover {
 .uk-offcanvas-bar .exchange__info svg {
   fill: rgba(255, 255, 255, 0.7);
 }
-.uk-light .exchange .select2-container .select2-selection--single,
-.uk-light .exchange .select2-container--default .select2-selection--single .select2-selection__rendered,
-.uk-section-primary:not(.uk-preserve-color) .exchange .select2-container .select2-selection--single,
-.uk-section-primary:not(.uk-preserve-color) .exchange .select2-container--default .select2-selection--single .select2-selection__rendered,
-.uk-section-secondary:not(.uk-preserve-color) .exchange .select2-container .select2-selection--single,
-.uk-section-secondary:not(.uk-preserve-color) .exchange .select2-container--default .select2-selection--single .select2-selection__rendered,
-.uk-tile-primary:not(.uk-preserve-color) .exchange .select2-container .select2-selection--single,
-.uk-tile-primary:not(.uk-preserve-color) .exchange .select2-container--default .select2-selection--single .select2-selection__rendered,
-.uk-tile-secondary:not(.uk-preserve-color) .exchange .select2-container .select2-selection--single,
-.uk-tile-secondary:not(.uk-preserve-color) .exchange .select2-container--default .select2-selection--single .select2-selection__rendered,
-.uk-card-primary.uk-card-body .exchange .select2-container .select2-selection--single,
-.uk-card-primary.uk-card-body .exchange .select2-container--default .select2-selection--single .select2-selection__rendered,
-.uk-card-primary > :not([class*='uk-card-media']) .exchange .select2-container .select2-selection--single,
-.uk-card-primary > :not([class*='uk-card-media']) .exchange .select2-container--default .select2-selection--single .select2-selection__rendered,
-.uk-card-secondary.uk-card-body .exchange .select2-container .select2-selection--single,
-.uk-card-secondary.uk-card-body .exchange .select2-container--default .select2-selection--single .select2-selection__rendered,
-.uk-card-secondary > :not([class*='uk-card-media']) .exchange .select2-container .select2-selection--single,
-.uk-card-secondary > :not([class*='uk-card-media']) .exchange .select2-container--default .select2-selection--single .select2-selection__rendered,
-.uk-overlay-primary .exchange .select2-container .select2-selection--single,
-.uk-overlay-primary .exchange .select2-container--default .select2-selection--single .select2-selection__rendered,
-.uk-offcanvas-bar .exchange .select2-container .select2-selection--single,
-.uk-offcanvas-bar .exchange .select2-container--default .select2-selection--single .select2-selection__rendered {
-  color: rgba(255, 255, 255, 0.7);
-}
-.uk-light .exchange .select2-container .select2-selection--single,
-.uk-section-primary:not(.uk-preserve-color) .exchange .select2-container .select2-selection--single,
-.uk-section-secondary:not(.uk-preserve-color) .exchange .select2-container .select2-selection--single,
-.uk-tile-primary:not(.uk-preserve-color) .exchange .select2-container .select2-selection--single,
-.uk-tile-secondary:not(.uk-preserve-color) .exchange .select2-container .select2-selection--single,
-.uk-card-primary.uk-card-body .exchange .select2-container .select2-selection--single,
-.uk-card-primary > :not([class*='uk-card-media']) .exchange .select2-container .select2-selection--single,
-.uk-card-secondary.uk-card-body .exchange .select2-container .select2-selection--single,
-.uk-card-secondary > :not([class*='uk-card-media']) .exchange .select2-container .select2-selection--single,
-.uk-overlay-primary .exchange .select2-container .select2-selection--single,
-.uk-offcanvas-bar .exchange .select2-container .select2-selection--single {
+.uk-light .exchange__name,
+.uk-section-primary:not(.uk-preserve-color) .exchange__name,
+.uk-section-secondary:not(.uk-preserve-color) .exchange__name,
+.uk-tile-primary:not(.uk-preserve-color) .exchange__name,
+.uk-tile-secondary:not(.uk-preserve-color) .exchange__name,
+.uk-card-primary.uk-card-body .exchange__name,
+.uk-card-primary > :not([class*='uk-card-media']) .exchange__name,
+.uk-card-secondary.uk-card-body .exchange__name,
+.uk-card-secondary > :not([class*='uk-card-media']) .exchange__name,
+.uk-overlay-primary .exchange__name,
+.uk-offcanvas-bar .exchange__name {
   background-color: #444;
   border-color: #333;
 }
-.uk-light .select2-dropdown,
-.uk-section-primary:not(.uk-preserve-color) .select2-dropdown,
-.uk-section-secondary:not(.uk-preserve-color) .select2-dropdown,
-.uk-tile-primary:not(.uk-preserve-color) .select2-dropdown,
-.uk-tile-secondary:not(.uk-preserve-color) .select2-dropdown,
-.uk-card-primary.uk-card-body .select2-dropdown,
-.uk-card-primary > :not([class*='uk-card-media']) .select2-dropdown,
-.uk-card-secondary.uk-card-body .select2-dropdown,
-.uk-card-secondary > :not([class*='uk-card-media']) .select2-dropdown,
-.uk-overlay-primary .select2-dropdown,
-.uk-offcanvas-bar .select2-dropdown {
-  background-color: #444;
-  border-color: #333;
+.uk-light .exchange__search,
+.uk-section-primary:not(.uk-preserve-color) .exchange__search,
+.uk-section-secondary:not(.uk-preserve-color) .exchange__search,
+.uk-tile-primary:not(.uk-preserve-color) .exchange__search,
+.uk-tile-secondary:not(.uk-preserve-color) .exchange__search,
+.uk-card-primary.uk-card-body .exchange__search,
+.uk-card-primary > :not([class*='uk-card-media']) .exchange__search,
+.uk-card-secondary.uk-card-body .exchange__search,
+.uk-card-secondary > :not([class*='uk-card-media']) .exchange__search,
+.uk-overlay-primary .exchange__search,
+.uk-offcanvas-bar .exchange__search {
+  color: inherit;
+  background-color: transparent;
+  border-color: #1e87f0;
 }
-.uk-light .select2-container--default .select2-results__option[aria-selected=true],
-.uk-section-primary:not(.uk-preserve-color) .select2-container--default .select2-results__option[aria-selected=true],
-.uk-section-secondary:not(.uk-preserve-color) .select2-container--default .select2-results__option[aria-selected=true],
-.uk-tile-primary:not(.uk-preserve-color) .select2-container--default .select2-results__option[aria-selected=true],
-.uk-tile-secondary:not(.uk-preserve-color) .select2-container--default .select2-results__option[aria-selected=true],
-.uk-card-primary.uk-card-body .select2-container--default .select2-results__option[aria-selected=true],
-.uk-card-primary > :not([class*='uk-card-media']) .select2-container--default .select2-results__option[aria-selected=true],
-.uk-card-secondary.uk-card-body .select2-container--default .select2-results__option[aria-selected=true],
-.uk-card-secondary > :not([class*='uk-card-media']) .select2-container--default .select2-results__option[aria-selected=true],
-.uk-overlay-primary .select2-container--default .select2-results__option[aria-selected=true],
-.uk-offcanvas-bar .select2-container--default .select2-results__option[aria-selected=true] {
+.uk-light .exchange__list > .uk-active,
+.uk-section-primary:not(.uk-preserve-color) .exchange__list > .uk-active,
+.uk-section-secondary:not(.uk-preserve-color) .exchange__list > .uk-active,
+.uk-tile-primary:not(.uk-preserve-color) .exchange__list > .uk-active,
+.uk-tile-secondary:not(.uk-preserve-color) .exchange__list > .uk-active,
+.uk-card-primary.uk-card-body .exchange__list > .uk-active,
+.uk-card-primary > :not([class*='uk-card-media']) .exchange__list > .uk-active,
+.uk-card-secondary.uk-card-body .exchange__list > .uk-active,
+.uk-card-secondary > :not([class*='uk-card-media']) .exchange__list > .uk-active,
+.uk-overlay-primary .exchange__list > .uk-active,
+.uk-offcanvas-bar .exchange__list > .uk-active {
   background-color: #222;
 }
-.uk-light .select2-container--default .select2-search--dropdown .select2-search__field,
-.uk-section-primary:not(.uk-preserve-color) .select2-container--default .select2-search--dropdown .select2-search__field,
-.uk-section-secondary:not(.uk-preserve-color) .select2-container--default .select2-search--dropdown .select2-search__field,
-.uk-tile-primary:not(.uk-preserve-color) .select2-container--default .select2-search--dropdown .select2-search__field,
-.uk-tile-secondary:not(.uk-preserve-color) .select2-container--default .select2-search--dropdown .select2-search__field,
-.uk-card-primary.uk-card-body .select2-container--default .select2-search--dropdown .select2-search__field,
-.uk-card-primary > :not([class*='uk-card-media']) .select2-container--default .select2-search--dropdown .select2-search__field,
-.uk-card-secondary.uk-card-body .select2-container--default .select2-search--dropdown .select2-search__field,
-.uk-card-secondary > :not([class*='uk-card-media']) .select2-container--default .select2-search--dropdown .select2-search__field,
-.uk-overlay-primary .select2-container--default .select2-search--dropdown .select2-search__field,
-.uk-offcanvas-bar .select2-container--default .select2-search--dropdown .select2-search__field {
-  border-color: #1e87f0;
+.uk-light .exchange .uk-dropdown,
+.uk-section-primary:not(.uk-preserve-color) .exchange .uk-dropdown,
+.uk-section-secondary:not(.uk-preserve-color) .exchange .uk-dropdown,
+.uk-tile-primary:not(.uk-preserve-color) .exchange .uk-dropdown,
+.uk-tile-secondary:not(.uk-preserve-color) .exchange .uk-dropdown,
+.uk-card-primary.uk-card-body .exchange .uk-dropdown,
+.uk-card-primary > :not([class*='uk-card-media']) .exchange .uk-dropdown,
+.uk-card-secondary.uk-card-body .exchange .uk-dropdown,
+.uk-card-secondary > :not([class*='uk-card-media']) .exchange .uk-dropdown,
+.uk-overlay-primary .exchange .uk-dropdown,
+.uk-offcanvas-bar .exchange .uk-dropdown {
+  color: rgba(255, 255, 255, 0.7);
+  background: #444;
+  border-color: #333;
 }
 .uk-light .uk-button-primary:disabled,
 .uk-section-primary:not(.uk-preserve-color) .uk-button-primary:disabled,

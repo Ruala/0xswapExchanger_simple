@@ -8,9 +8,9 @@
 // ========================================================================
 
 @dropdown-z-index:                              @global-z-index + 20;
-@dropdown-min-width:                            200px;
-@dropdown-padding:                              15px;
-@dropdown-background:                           @global-muted-background;
+@dropdown-min-width:                            100%;
+@dropdown-padding:                              0;
+@dropdown-background:                           @global-background;
 @dropdown-color:                                @global-color;
 @dropdown-margin:                               @global-small-margin;
 
@@ -34,7 +34,12 @@
 // Component
 // ========================================================================
 
-.hook-dropdown() { box-shadow: @dropdown-box-shadow; }
+.hook-dropdown() {
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid @global-border;
+  box-shadow: @dropdown-box-shadow;
+}
 
 
 // Nav
