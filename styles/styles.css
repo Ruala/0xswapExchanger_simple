@@ -12655,6 +12655,9 @@ iframe.uk-cover {
 .exchange__list > .uk-active {
   background-color: #ddd;
 }
+.modal-svg {
+  fill: #666;
+}
 .uk-light .uk-alert-success,
 .uk-section-primary:not(.uk-preserve-color) .uk-alert-success,
 .uk-section-secondary:not(.uk-preserve-color) .uk-alert-success,
@@ -12855,6 +12858,32 @@ iframe.uk-cover {
   background-color: #333;
   color: #999;
   border-color: #333;
+}
+.uk-light .modal-svg,
+.uk-section-primary:not(.uk-preserve-color) .modal-svg,
+.uk-section-secondary:not(.uk-preserve-color) .modal-svg,
+.uk-tile-primary:not(.uk-preserve-color) .modal-svg,
+.uk-tile-secondary:not(.uk-preserve-color) .modal-svg,
+.uk-card-primary.uk-card-body .modal-svg,
+.uk-card-primary > :not([class*='uk-card-media']) .modal-svg,
+.uk-card-secondary.uk-card-body .modal-svg,
+.uk-card-secondary > :not([class*='uk-card-media']) .modal-svg,
+.uk-overlay-primary .modal-svg,
+.uk-offcanvas-bar .modal-svg {
+  fill: #fff;
+}
+.uk-light .uk-modal-dialog,
+.uk-section-primary:not(.uk-preserve-color) .uk-modal-dialog,
+.uk-section-secondary:not(.uk-preserve-color) .uk-modal-dialog,
+.uk-tile-primary:not(.uk-preserve-color) .uk-modal-dialog,
+.uk-tile-secondary:not(.uk-preserve-color) .uk-modal-dialog,
+.uk-card-primary.uk-card-body .uk-modal-dialog,
+.uk-card-primary > :not([class*='uk-card-media']) .uk-modal-dialog,
+.uk-card-secondary.uk-card-body .uk-modal-dialog,
+.uk-card-secondary > :not([class*='uk-card-media']) .uk-modal-dialog,
+.uk-overlay-primary .uk-modal-dialog,
+.uk-offcanvas-bar .uk-modal-dialog {
+  background: #444;
 }
 @media (max-width: 460px) {
   .uk-logo {
