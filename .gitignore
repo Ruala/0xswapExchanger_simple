@@ -1,0 +1,6 @@
+/.idea/
+/node_modules/
+npm.lock
+yarn.lock
+
+/dist/
