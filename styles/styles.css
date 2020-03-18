@@ -12623,7 +12623,7 @@ iframe.uk-cover {
   content: '';
   display: block;
   position: absolute;
-  top: 50%;
+  top: calc(50% - 2px);
   right: 10px;
   width: 3px;
   height: 3px;
