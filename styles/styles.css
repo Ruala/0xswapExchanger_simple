@@ -10280,7 +10280,7 @@ iframe.uk-cover {
 .uk-offcanvas-bar .uk-select:focus,
 .uk-offcanvas-bar .uk-textarea:focus {
   background-color: transparent;
-  color: rgba(255, 255, 255, 0.7);
+  color: #fff;
   border-color: rgba(255, 255, 255, 0.7);
 }
 .uk-light .uk-input::-ms-input-placeholder,
