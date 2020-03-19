@@ -12549,6 +12549,7 @@ iframe.uk-cover {
   width: 16px;
   height: 16px;
   overflow: hidden;
+  border: 1px solid #333;
   border-radius: 50%;
 }
 .svg-round-wrapper svg,
