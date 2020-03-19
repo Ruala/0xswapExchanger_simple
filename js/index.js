@@ -69,7 +69,7 @@ $(()=>{
 
             function animateImages() {
                 imageList[current].fadeOut(() => {
-                    setTimeout(animateImages, 1000);
+                    setTimeout(animateImages, 100);
                 });
                 imageList[next].fadeIn();
 
