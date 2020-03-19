@@ -7,16 +7,16 @@ $(()=>{
 
         function toggleTheme() {
             const $target = $(this);
-            const $body = $('body');
+            const $html = $('html');
             let theme = $target.attr('data-theme');
 
             switch (theme) {
                 case 'day':
-                    $body.addClass('uk-light uk-background-secondary');
+                    $html.addClass('uk-light uk-background-secondary');
                     $target.attr('data-theme', 'night');
                     break;
                 case 'night':
-                    $body.removeClass('uk-light uk-background-secondary');
+                    $html.removeClass('uk-light uk-background-secondary');
                     $target.attr('data-theme', 'day');
                     break;
             }
@@ -46,4 +46,15 @@ $(()=>{
             $item.removeClass('exchange__item_focused');
         }
     })();
+
+    //numberAnimate for test
+    // (() => {
+    //     const $target = $('.number-animate');
+    //     $target.numberAnimate();
+    //
+    //     $('.exchange__input').keypress(function(e){
+    //         e.preventDefault();
+    //         $target.numberAnimate('set', $(this).val());
+    //     });
+    // })();
 });
