@@ -12551,8 +12551,25 @@ iframe.uk-cover {
   overflow: hidden;
   border-radius: 50%;
 }
-.svg-round-wrapper svg {
+.svg-round-wrapper svg,
+.svg-round-wrapper img {
   max-width: none;
+  vertical-align: top;
+}
+.icons-loader img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 50px;
+}
+.btn-loader {
+  position: relative;
+}
+.btn-loader__icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
 }
 .number-animate {
   text-align: center;

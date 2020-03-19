@@ -155,8 +155,30 @@
   overflow: hidden;
   border-radius: 50%;
 
-  svg {
+  svg, img {
     max-width: none;
+    vertical-align: top;
+  }
+}
+
+.icons-loader {
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 50px;
+  }
+}
+
+.btn-loader {
+  position: relative;
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
   }
 }
 

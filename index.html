@@ -29,13 +29,13 @@
                         </button>
 
                         <button class="btn-wallet btn-wallet_connected uk-button uk-button-primary uk-flex uk-flex-middle">
-                            <div class="uk-margin-small-right uk-flex uk-flex-middle">
+                            <div class="uk-margin-small-right uk-flex">
                                 <div class="svg-round-wrapper">
-                                    <svg height="100" version="1.1" width="100" xmlns="http://www.w3.org/2000/svg" style="overflow: hidden; position: relative;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.3.0</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><rect x="0" y="0" width="16" height="16" rx="0" ry="0" fill="#fa9e00" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><rect x="0" y="0" width="16" height="16" rx="0" ry="0" fill="#f96801" stroke="none" transform="matrix(0.9989,-0.046,0.046,0.9989,-3.3501,-0.5789)" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><rect x="0" y="0" width="16" height="16" rx="0" ry="0" fill="#1876f2" stroke="none" transform="matrix(-0.3989,0.917,-0.917,-0.3989,16.6883,12.7145)" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><rect x="0" y="0" width="16" height="16" rx="0" ry="0" fill="#fb183a" stroke="none" transform="matrix(0.997,-0.0768,0.0768,0.997,-16.2312,-2.6377)" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect></svg>
+                                    <svg height="100" version="1.1" width="100" xmlns="http://www.w3.org/2000/svg"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.3.0</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><rect x="0" y="0" width="16" height="16" rx="0" ry="0" fill="#fa9e00" stroke="none" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><rect x="0" y="0" width="16" height="16" rx="0" ry="0" fill="#f96801" stroke="none" transform="matrix(0.9989,-0.046,0.046,0.9989,-3.3501,-0.5789)" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><rect x="0" y="0" width="16" height="16" rx="0" ry="0" fill="#1876f2" stroke="none" transform="matrix(-0.3989,0.917,-0.917,-0.3989,16.6883,12.7145)" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect><rect x="0" y="0" width="16" height="16" rx="0" ry="0" fill="#fb183a" stroke="none" transform="matrix(0.997,-0.0768,0.0768,0.997,-16.2312,-2.6377)" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></rect></svg>
                                 </div>
                             </div>
 
-                            <span class="uk-margin-small-right">0xC9d8...dC29</span>
+                            <span>0xC9d8...dC29</span>
                         </button>
                     </div>
                 </div>
@@ -134,13 +134,29 @@
 
                     <div class="exchange__controls">
                         <div class="uk-margin-bottom" uk-margin>
-                            <button class="uk-button uk-button-success">Unlock 11 DAI</button>
-                            <button class="uk-button uk-button-warning">Infinity unlock</button>
+                            <button class="btn-loader uk-button uk-button-success">
+                                <div class="icons-loader svg-round-wrapper btn-loader__icon"></div>
+
+                                <span>Unlock 11 DAI</span>
+                            </button>
+                            <button class="btn-loader uk-button uk-button-warning">
+                                <div class="icons-loader svg-round-wrapper btn-loader__icon"></div>
+
+                                <span>Infinity unlock</span>
+                            </button>
                         </div>
                         <div uk-margin>
-                            <button class="uk-button uk-button-primary" uk-toggle="target: #verify-modal">Exchange</button>
+                            <button class="btn-loader uk-button uk-button-primary" uk-toggle="target: #verify-modal">
+                                <div class="icons-loader svg-round-wrapper btn-loader__icon"></div>
+
+                                <span>Exchange</span>
+                            </button>
                             <button class="uk-button uk-button-primary" disabled>Exchange</button>
-                            <button class="uk-button uk-button-danger">Lock</button>
+                            <button class="btn-loader uk-button uk-button-danger">
+                                <div class="icons-loader svg-round-wrapper btn-loader__icon"></div>
+
+                                <span>Lock</span>
+                            </button>
                         </div>
                     </div>
 

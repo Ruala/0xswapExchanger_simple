@@ -47,6 +47,46 @@ $(()=>{
         }
     })();
 
+    //loader
+    (() => {
+        const $containers = $('.icons-loader');
+        const baseUrl = "images/loader/icon";
+        const maxNum = 7;
+
+        $containers.each(function() {
+            const $container = $(this);
+            const imageList = [];
+            let current = 0;
+            let next = 1;
+
+            for (let i = 1; i <= maxNum; i++) {
+                const $image = createImage(i);
+                imageList.push($image);
+                $container.append($image);
+            }
+
+            animateImages();
+
+            function animateImages() {
+                imageList[current].fadeOut(() => {
+                    setTimeout(animateImages, 1000);
+                });
+                imageList[next].fadeIn();
+
+                current = next;
+                next++;
+
+                if (next === maxNum) {
+                    next = 0;
+                }
+            }
+
+            function createImage(num) {
+                return  $('<img src="' + baseUrl + num + '.svg"/>');
+            }
+        });
+    })();
+
     //numberAnimate for test
     // (() => {
     //     const $target = $('.number-animate');
