@@ -12544,6 +12544,16 @@ iframe.uk-cover {
 .btn-swap:hover {
   opacity: 1;
 }
+.svg-round-wrapper {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.svg-round-wrapper svg {
+  max-width: none;
+}
 .number-animate {
   text-align: center;
 }
