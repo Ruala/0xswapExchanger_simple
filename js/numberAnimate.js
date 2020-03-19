@@ -233,10 +233,18 @@
                 var docFrag = document.createDocumentFragment();
                 for (var i = 0, len = valueStr.length; i < len; i++) {
                     var character = valueStr.charAt(i);
+                    var currentCharacterWidth = characterWidth;
+
+                    if (character === ".") {
+                        $this.html(".");
+                        currentCharacterWidth = $this.width();
+                        $this.html("");
+                    }
+
                     //create the divs with zero animation time..
                     docFrag.appendChild(
                         createDivForChar(character, characterHeight,
-                            characterWidth, indexOfPoint - i, [0, 0, 0])
+                            currentCharacterWidth, indexOfPoint - i, [0, 0, 0])
                     );
                 }
                 $this.append(docFrag); //add in one go.
