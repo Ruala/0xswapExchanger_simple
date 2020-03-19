@@ -5174,7 +5174,7 @@ ul.uk-nav-sub {
   /* 2 */
   box-sizing: border-box;
   margin: 0 auto;
-  width: 600px;
+  width: 700px;
   /* 3 */
   max-width: calc(100% - 0.01px) !important;
   /* 4 */
@@ -5184,6 +5184,7 @@ ul.uk-nav-sub {
   transform: translateY(-100px);
   transition: 0.3s linear;
   transition-property: opacity, transform;
+  border-radius: 15px;
 }
 /*
  * Open
