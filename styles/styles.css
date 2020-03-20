@@ -12534,6 +12534,7 @@ iframe.uk-cover {
 .btn-swap,
 .btn-refresh {
   padding: 0;
+  line-height: 1;
   background: none;
   color: #666;
   opacity: 0.8;
