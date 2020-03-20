@@ -237,7 +237,7 @@
 
                     if (character === ".") {
                         $this.html(".");
-                        currentCharacterWidth = Math.ceil($this.width());
+                        currentCharacterWidth = Math.round($this.width());
                         $this.html("");
                     }
 
