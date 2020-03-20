@@ -210,8 +210,8 @@
 
                 //get width of a single character (assume mono-spaced font)..
                 $this.html("0");
-                var characterWidth = $this.width();
-                var characterHeight = $this.height();
+                var characterWidth = Math.ceil($this.width());
+                var characterHeight = Math.ceil($this.height());
                 $this.attr("data-numberAnimate-characterHeight", characterHeight);
                 $this.attr("data-numberAnimate-characterWidth", characterWidth);
                 $this.html("");
@@ -237,7 +237,7 @@
 
                     if (character === ".") {
                         $this.html(".");
-                        currentCharacterWidth = $this.width();
+                        currentCharacterWidth = Math.ceil($this.width());
                         $this.html("");
                     }
 
