@@ -12531,17 +12531,20 @@ iframe.uk-cover {
   display: none;
   padding: 10px 0;
 }
-.btn-swap {
+.btn-swap,
+.btn-refresh {
   padding: 0;
   background: none;
   color: #666;
   opacity: 0.8;
   transition: all 0.1s ease-in-out;
 }
-.btn-swap svg {
+.btn-swap svg,
+.btn-refresh svg {
   fill: #666;
 }
-.btn-swap:hover {
+.btn-swap:hover,
+.btn-refresh:hover {
   opacity: 1;
 }
 .svg-round-wrapper {
@@ -12597,9 +12600,6 @@ iframe.uk-cover {
   background-color: #eee;
 }
 .exchange__info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 10px 20px;
   margin: 0 15px;
   font-size: 14px;
@@ -12734,29 +12734,51 @@ iframe.uk-cover {
   color: #fff;
 }
 .uk-light .btn-swap,
+.uk-light .btn-refresh,
 .uk-section-primary:not(.uk-preserve-color) .btn-swap,
+.uk-section-primary:not(.uk-preserve-color) .btn-refresh,
 .uk-section-secondary:not(.uk-preserve-color) .btn-swap,
+.uk-section-secondary:not(.uk-preserve-color) .btn-refresh,
 .uk-tile-primary:not(.uk-preserve-color) .btn-swap,
+.uk-tile-primary:not(.uk-preserve-color) .btn-refresh,
 .uk-tile-secondary:not(.uk-preserve-color) .btn-swap,
+.uk-tile-secondary:not(.uk-preserve-color) .btn-refresh,
 .uk-card-primary.uk-card-body .btn-swap,
+.uk-card-primary.uk-card-body .btn-refresh,
 .uk-card-primary > :not([class*='uk-card-media']) .btn-swap,
+.uk-card-primary > :not([class*='uk-card-media']) .btn-refresh,
 .uk-card-secondary.uk-card-body .btn-swap,
+.uk-card-secondary.uk-card-body .btn-refresh,
 .uk-card-secondary > :not([class*='uk-card-media']) .btn-swap,
+.uk-card-secondary > :not([class*='uk-card-media']) .btn-refresh,
 .uk-overlay-primary .btn-swap,
-.uk-offcanvas-bar .btn-swap {
+.uk-overlay-primary .btn-refresh,
+.uk-offcanvas-bar .btn-swap,
+.uk-offcanvas-bar .btn-refresh {
   color: rgba(255, 255, 255, 0.7);
 }
 .uk-light .btn-swap svg,
+.uk-light .btn-refresh svg,
 .uk-section-primary:not(.uk-preserve-color) .btn-swap svg,
+.uk-section-primary:not(.uk-preserve-color) .btn-refresh svg,
 .uk-section-secondary:not(.uk-preserve-color) .btn-swap svg,
+.uk-section-secondary:not(.uk-preserve-color) .btn-refresh svg,
 .uk-tile-primary:not(.uk-preserve-color) .btn-swap svg,
+.uk-tile-primary:not(.uk-preserve-color) .btn-refresh svg,
 .uk-tile-secondary:not(.uk-preserve-color) .btn-swap svg,
+.uk-tile-secondary:not(.uk-preserve-color) .btn-refresh svg,
 .uk-card-primary.uk-card-body .btn-swap svg,
+.uk-card-primary.uk-card-body .btn-refresh svg,
 .uk-card-primary > :not([class*='uk-card-media']) .btn-swap svg,
+.uk-card-primary > :not([class*='uk-card-media']) .btn-refresh svg,
 .uk-card-secondary.uk-card-body .btn-swap svg,
+.uk-card-secondary.uk-card-body .btn-refresh svg,
 .uk-card-secondary > :not([class*='uk-card-media']) .btn-swap svg,
+.uk-card-secondary > :not([class*='uk-card-media']) .btn-refresh svg,
 .uk-overlay-primary .btn-swap svg,
-.uk-offcanvas-bar .btn-swap svg {
+.uk-overlay-primary .btn-refresh svg,
+.uk-offcanvas-bar .btn-swap svg,
+.uk-offcanvas-bar .btn-refresh svg {
   fill: rgba(255, 255, 255, 0.7);
 }
 .uk-light .exchange__item,
