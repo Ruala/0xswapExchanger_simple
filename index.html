@@ -82,9 +82,17 @@
                     </div>
 
                     <div class="exchange__swap">
-                        <button class="btn-swap uk-button">
-                            <svg enable-background="new 0 0 64 64" viewBox="0 0 64 64" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m31.414 15.586-7-7c-.78-.781-2.048-.781-2.828 0l-7 7c-.781.781-.781 2.047 0 2.828.78.781 2.048.781 2.828 0l3.586-3.586v39.172c0 1.104.896 2 2 2s2-.896 2-2v-39.172l3.586 3.586c.39.391.902.586 1.414.586s1.024-.195 1.414-.586c.781-.781.781-2.047 0-2.828z"/><path d="m49.414 45.586c-.781-.781-2.047-.781-2.828 0l-3.586 3.586v-39.172c0-1.104-.896-2-2-2s-2 .896-2 2v39.172l-3.586-3.586c-.781-.781-2.048-.781-2.828 0-.781.781-.781 2.047 0 2.828l7 7c.391.391.902.586 1.414.586s1.023-.195 1.414-.586l7-7c.781-.781.781-2.047 0-2.828z"/></svg>
-                        </button>
+                        <div class="uk-grid uk-grid-small uk-flex-middle" uk-grid>
+                            <div class="uk-width-expand uk-text-center uk-text-small uk-text-muted">Slippage: 0.1%</div>
+
+                            <div class="uk-width-auto uk-text-center">
+                                <button class="btn-swap uk-button">
+                                    <svg enable-background="new 0 0 64 64" viewBox="0 0 64 64" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m31.414 15.586-7-7c-.78-.781-2.048-.781-2.828 0l-7 7c-.781.781-.781 2.047 0 2.828.78.781 2.048.781 2.828 0l3.586-3.586v39.172c0 1.104.896 2 2 2s2-.896 2-2v-39.172l3.586 3.586c.39.391.902.586 1.414.586s1.024-.195 1.414-.586c.781-.781.781-2.047 0-2.828z"/><path d="m49.414 45.586c-.781-.781-2.047-.781-2.828 0l-3.586 3.586v-39.172c0-1.104-.896-2-2-2s-2 .896-2 2v39.172l-3.586-3.586c-.781-.781-2.048-.781-2.828 0-.781.781-.781 2.047 0 2.828l7 7c.391.391.902.586 1.414.586s1.023-.195 1.414-.586l7-7c.781-.781.781-2.047 0-2.828z"/></svg>
+                                </button>
+                            </div>
+
+                            <div class="uk-width-expand  uk-text-center uk-text-small uk-text-muted">GAS price: 8 Fast</div>
+                        </div>
                     </div>
                     
                     <div class="exchange__item">
@@ -170,15 +178,15 @@
                                     <span>Show details</span>
                                 </a>
                                 <div class="uk-accordion-content">
-                                    <div class="uk-child-width-expand@m uk-grid uk-grid-small" uk-grid>
+                                    <div class="uk-child-width-expand@s uk-grid uk-grid-small" uk-grid>
                                         <div uk-margin>
-                                            <div class="uk-flex uk-flex-middle">
+                                            <div class="uk-flex uk-flex-middle uk-flex-center">
                                                 <div class="uk-text-bold uk-margin-small-right">Slippage %</div>
                                                 <div uk-tooltip="Lowering this limit decreases your risk of frontrunning. However, this makes it more likely that your transaction will fail due to normal price movements.">
                                                     <svg class="theme-svg" viewBox="0 0 384 384" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m192 0c-105.871094 0-192 86.128906-192 192s86.128906 192 192 192 192-86.128906 192-192-86.128906-192-192-192zm0 352c-88.222656 0-160-71.777344-160-160s71.777344-160 160-160 160 71.777344 160 160-71.777344 160-160 160zm0 0"/><path d="m224 288h-16v-128c0-8.832031-7.167969-16-16-16h-24c-8.832031 0-16 7.167969-16 16s7.167969 16 16 16h8v112h-16c-8.832031 0-16 7.167969-16 16s7.167969 16 16 16h64c8.832031 0 16-7.167969 16-16s-7.167969-16-16-16zm0 0"/><path d="m192 112c13.230469 0 24-10.769531 24-24s-10.769531-24-24-24-24 10.769531-24 24 10.769531 24 24 24zm0 0"/></svg>
                                                 </div>
                                             </div>
-                                            <div class="uk-flex uk-flex-middle" uk-margin>
+                                            <div class="uk-flex uk-flex-wrap uk-flex-middle uk-flex-center" uk-margin>
                                                 <button class="uk-active uk-button uk-button-small uk-button-default uk-margin-small-right">0.1%</button>
                                                 <button class="uk-button uk-button-small uk-button-default uk-margin-small-right">0.5%</button>
                                                 <button class="uk-button uk-button-small uk-button-default uk-margin-small-right">1%</button>
@@ -190,13 +198,13 @@
                                         </div>
 
                                         <div uk-margin>
-                                            <div class="uk-flex uk-flex-middle">
+                                            <div class="uk-flex uk-flex-middle uk-flex-center">
                                                 <div class="uk-text-bold uk-margin-small-right">GAS price</div>
                                                 <div uk-tooltip="Higher gas price, faster transaction.">
                                                     <svg class="theme-svg" viewBox="0 0 384 384" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m192 0c-105.871094 0-192 86.128906-192 192s86.128906 192 192 192 192-86.128906 192-192-86.128906-192-192-192zm0 352c-88.222656 0-160-71.777344-160-160s71.777344-160 160-160 160 71.777344 160 160-71.777344 160-160 160zm0 0"/><path d="m224 288h-16v-128c0-8.832031-7.167969-16-16-16h-24c-8.832031 0-16 7.167969-16 16s7.167969 16 16 16h8v112h-16c-8.832031 0-16 7.167969-16 16s7.167969 16 16 16h64c8.832031 0 16-7.167969 16-16s-7.167969-16-16-16zm0 0"/><path d="m192 112c13.230469 0 24-10.769531 24-24s-10.769531-24-24-24-24 10.769531-24 24 10.769531 24 24 24zm0 0"/></svg>
                                                 </div>
                                             </div>
-                                            <div class="uk-flex uk-flex-middle" uk-margin>
+                                            <div class="uk-flex uk-flex-wrap uk-flex-middle uk-flex-center" uk-margin>
                                                 <button class="uk-active uk-button uk-button-small uk-button-default uk-margin-small-right">8 Fast</button>
                                                 <button class="uk-button uk-button-small uk-button-default uk-margin-small-right">11 Instant</button>
                                                 <div class="uk-flex uk-flex-middle uk-flex-center">
