@@ -119,6 +119,10 @@
   }
 }
 
+.theme-svg {
+  fill: @global-color;
+}
+
 .btn-wallet {
   font-size: 14px;
 
@@ -325,6 +329,13 @@
   fill: @global-color;
 }
 
+.accordion {
+
+  &__input {
+    width: 100px;
+  }
+}
+
 .uk-light {
 
   .uk-alert-success {
@@ -340,6 +351,10 @@
   .uk-alert-danger {
     background: lighten(shade(@global-danger-background, 45%), 20%);
     color: #fff;
+  }
+
+  .theme-svg {
+    fill: @inverse-global-color;
   }
 
   .btn-swap, .btn-refresh {

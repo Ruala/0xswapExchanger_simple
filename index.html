@@ -163,6 +163,54 @@
                         Enter a value to continue.
                     </div>
 
+                    <div class="exchange__status">
+                        <ul uk-accordion>
+                            <li>
+                                <a class="uk-accordion-title" href="#">
+                                    <span>Show details</span>
+                                </a>
+                                <div class="uk-accordion-content">
+                                    <div class="uk-child-width-expand@m uk-grid uk-grid-small" uk-grid>
+                                        <div uk-margin>
+                                            <div class="uk-flex uk-flex-middle">
+                                                <div class="uk-text-bold uk-margin-small-right">Slippage %</div>
+                                                <div uk-tooltip="Lowering this limit decreases your risk of frontrunning. However, this makes it more likely that your transaction will fail due to normal price movements.">
+                                                    <svg class="theme-svg" viewBox="0 0 384 384" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m192 0c-105.871094 0-192 86.128906-192 192s86.128906 192 192 192 192-86.128906 192-192-86.128906-192-192-192zm0 352c-88.222656 0-160-71.777344-160-160s71.777344-160 160-160 160 71.777344 160 160-71.777344 160-160 160zm0 0"/><path d="m224 288h-16v-128c0-8.832031-7.167969-16-16-16h-24c-8.832031 0-16 7.167969-16 16s7.167969 16 16 16h8v112h-16c-8.832031 0-16 7.167969-16 16s7.167969 16 16 16h64c8.832031 0 16-7.167969 16-16s-7.167969-16-16-16zm0 0"/><path d="m192 112c13.230469 0 24-10.769531 24-24s-10.769531-24-24-24-24 10.769531-24 24 10.769531 24 24 24zm0 0"/></svg>
+                                                </div>
+                                            </div>
+                                            <div class="uk-flex uk-flex-middle" uk-margin>
+                                                <button class="uk-active uk-button uk-button-small uk-button-default uk-margin-small-right">0.1%</button>
+                                                <button class="uk-button uk-button-small uk-button-default uk-margin-small-right">0.5%</button>
+                                                <button class="uk-button uk-button-small uk-button-default uk-margin-small-right">1%</button>
+                                                <div class="uk-flex uk-flex-middle uk-flex-center">
+                                                    <input class="accordion__input uk-input uk-form-small uk-margin-small-right" type="text" placeholder="Custom">
+                                                    <span>%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div uk-margin>
+                                            <div class="uk-flex uk-flex-middle">
+                                                <div class="uk-text-bold uk-margin-small-right">GAS price</div>
+                                                <div uk-tooltip="Higher gas price, faster transaction.">
+                                                    <svg class="theme-svg" viewBox="0 0 384 384" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m192 0c-105.871094 0-192 86.128906-192 192s86.128906 192 192 192 192-86.128906 192-192-86.128906-192-192-192zm0 352c-88.222656 0-160-71.777344-160-160s71.777344-160 160-160 160 71.777344 160 160-71.777344 160-160 160zm0 0"/><path d="m224 288h-16v-128c0-8.832031-7.167969-16-16-16h-24c-8.832031 0-16 7.167969-16 16s7.167969 16 16 16h8v112h-16c-8.832031 0-16 7.167969-16 16s7.167969 16 16 16h64c8.832031 0 16-7.167969 16-16s-7.167969-16-16-16zm0 0"/><path d="m192 112c13.230469 0 24-10.769531 24-24s-10.769531-24-24-24-24 10.769531-24 24 10.769531 24 24 24zm0 0"/></svg>
+                                                </div>
+                                            </div>
+                                            <div class="uk-flex uk-flex-middle" uk-margin>
+                                                <button class="uk-active uk-button uk-button-small uk-button-default uk-margin-small-right">8 Fast</button>
+                                                <button class="uk-button uk-button-small uk-button-default uk-margin-small-right">11 Instant</button>
+                                                <div class="uk-flex uk-flex-middle uk-flex-center">
+                                                    <input class="accordion__input uk-input uk-form-small uk-margin-small-right" type="text" placeholder="Custom">
+                                                    <span>GWEI</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
                     <div class="exchange__controls">
                         <div class="uk-margin-bottom" uk-margin>
                             <button class="btn-loader uk-button uk-button-success">

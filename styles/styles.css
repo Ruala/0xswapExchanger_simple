@@ -1439,6 +1439,7 @@ button.uk-icon:not(:disabled) {
   background: transparent;
   color: #666;
   border: 1px solid #e5e5e5;
+  border-radius: 500px;
   transition: 0.2s ease-in-out;
   transition-property: color, background-color, border;
 }
@@ -1961,14 +1962,14 @@ select.uk-form-width-xsmall {
 .uk-button-default:focus {
   background-color: #ebebeb;
   color: #333;
-  border-color: #b2b2b2;
+  border-color: #1e87f0;
 }
 /* OnClick + Active */
 .uk-button-default:active,
 .uk-button-default.uk-active {
   background-color: #dfdfdf;
   color: #333;
-  border-color: #999999;
+  border-color: #1e87f0;
 }
 /*
  * Primary
@@ -2045,7 +2046,7 @@ select.uk-form-width-xsmall {
 /* Size modifiers
  ========================================================================== */
 .uk-button-small {
-  padding: 0 15px;
+  padding: 0 10px;
   line-height: 30px;
   font-size: 0.875rem;
 }
@@ -4918,22 +4919,32 @@ ul.uk-nav-sub {
  ========================================================================== */
 .uk-accordion-title {
   display: block;
-  font-size: 1.25rem;
+  font-size: 0.875rem;
   line-height: 1.4;
   color: #333;
   overflow: hidden;
 }
-.uk-accordion-title::after {
-  content: "";
-  width: 1.4em;
-  height: 1.4em;
-  float: right;
-  background-image: url("../../images/backgrounds/accordion-close.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+.uk-accordion-title > span {
+  display: inline-block;
+  position: relative;
+  padding-right: 20px;
 }
-.uk-open > .uk-accordion-title::after {
-  background-image: url("../../images/backgrounds/accordion-open.svg");
+.uk-accordion-title > span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: calc(50% - 1px);
+  right: 10px;
+  width: 3px;
+  height: 3px;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  transform: rotate(45deg);
+  transition: all 0.2s linear;
+}
+.uk-open .uk-accordion-title > span::after {
+  top: calc(50% + 1px);
+  transform: rotate(225deg);
 }
 /* Hover + Focus */
 .uk-accordion-title:hover,
@@ -10583,7 +10594,7 @@ iframe.uk-cover {
 .uk-offcanvas-bar .uk-button-default {
   background-color: transparent;
   color: #fff;
-  border-color: rgba(255, 255, 255, 0.7);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 .uk-light .uk-button-default:hover,
 .uk-light .uk-button-default:focus,
@@ -10607,7 +10618,7 @@ iframe.uk-cover {
 .uk-overlay-primary .uk-button-default:focus,
 .uk-offcanvas-bar .uk-button-default:hover,
 .uk-offcanvas-bar .uk-button-default:focus {
-  background-color: transparent;
+  background-color: #444;
   color: #fff;
   border-color: #fff;
 }
@@ -10633,7 +10644,7 @@ iframe.uk-cover {
 .uk-overlay-primary .uk-button-default.uk-active,
 .uk-offcanvas-bar .uk-button-default:active,
 .uk-offcanvas-bar .uk-button-default.uk-active {
-  background-color: transparent;
+  background-color: #444;
   color: #fff;
   border-color: #fff;
 }
@@ -12364,7 +12375,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*='uk-card-media']) .uk-accordion-title::after,
 .uk-overlay-primary .uk-accordion-title::after,
 .uk-offcanvas-bar .uk-accordion-title::after {
-  background-image: url("../../images/backgrounds/accordion-close.svg");
+  background-image: url("");
 }
 .uk-light .uk-open > .uk-accordion-title::after,
 .uk-section-primary:not(.uk-preserve-color) .uk-open > .uk-accordion-title::after,
@@ -12377,7 +12388,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*='uk-card-media']) .uk-open > .uk-accordion-title::after,
 .uk-overlay-primary .uk-open > .uk-accordion-title::after,
 .uk-offcanvas-bar .uk-open > .uk-accordion-title::after {
-  background-image: url("../../images/backgrounds/accordion-open.svg");
+  background-image: url("");
 }
 /* ========================================================================
    Component: Print
@@ -12520,6 +12531,9 @@ iframe.uk-cover {
   width: 30px;
   padding: 5px;
   border-radius: 50%;
+}
+.theme-svg {
+  fill: #666;
 }
 .btn-wallet {
   font-size: 14px;
@@ -12692,6 +12706,9 @@ iframe.uk-cover {
 .modal-svg {
   fill: #666;
 }
+.accordion__input {
+  width: 100px;
+}
 .uk-light .uk-alert-success,
 .uk-section-primary:not(.uk-preserve-color) .uk-alert-success,
 .uk-section-secondary:not(.uk-preserve-color) .uk-alert-success,
@@ -12733,6 +12750,19 @@ iframe.uk-cover {
 .uk-offcanvas-bar .uk-alert-danger {
   background: #c55167;
   color: #fff;
+}
+.uk-light .theme-svg,
+.uk-section-primary:not(.uk-preserve-color) .theme-svg,
+.uk-section-secondary:not(.uk-preserve-color) .theme-svg,
+.uk-tile-primary:not(.uk-preserve-color) .theme-svg,
+.uk-tile-secondary:not(.uk-preserve-color) .theme-svg,
+.uk-card-primary.uk-card-body .theme-svg,
+.uk-card-primary > :not([class*='uk-card-media']) .theme-svg,
+.uk-card-secondary.uk-card-body .theme-svg,
+.uk-card-secondary > :not([class*='uk-card-media']) .theme-svg,
+.uk-overlay-primary .theme-svg,
+.uk-offcanvas-bar .theme-svg {
+  fill: rgba(255, 255, 255, 0.7);
 }
 .uk-light .btn-swap,
 .uk-light .btn-refresh,
