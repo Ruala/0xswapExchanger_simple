@@ -1995,20 +1995,20 @@ select.uk-form-width-xsmall {
  * Secondary
  */
 .uk-button-secondary {
-  background-color: #222;
+  background-color: #444;
   color: #fff;
   border: 1px solid transparent;
 }
 /* Hover + Focus */
 .uk-button-secondary:hover,
 .uk-button-secondary:focus {
-  background-color: #151515;
+  background-color: #373737;
   color: #fff;
 }
 /* OnClick + Active */
 .uk-button-secondary:active,
 .uk-button-secondary.uk-active {
-  background-color: #080808;
+  background-color: #2b2b2b;
   color: #fff;
 }
 /*
@@ -10723,8 +10723,8 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*='uk-card-media']) .uk-button-secondary,
 .uk-overlay-primary .uk-button-secondary,
 .uk-offcanvas-bar .uk-button-secondary {
-  background-color: #fff;
-  color: #666;
+  background-color: #444;
+  color: #fff;
 }
 .uk-light .uk-button-secondary:hover,
 .uk-light .uk-button-secondary:focus,
@@ -10748,8 +10748,8 @@ iframe.uk-cover {
 .uk-overlay-primary .uk-button-secondary:focus,
 .uk-offcanvas-bar .uk-button-secondary:hover,
 .uk-offcanvas-bar .uk-button-secondary:focus {
-  background-color: #f2f2f2;
-  color: #666;
+  background-color: #373737;
+  color: #fff;
 }
 .uk-light .uk-button-secondary:active,
 .uk-light .uk-button-secondary.uk-active,
@@ -10773,8 +10773,8 @@ iframe.uk-cover {
 .uk-overlay-primary .uk-button-secondary.uk-active,
 .uk-offcanvas-bar .uk-button-secondary:active,
 .uk-offcanvas-bar .uk-button-secondary.uk-active {
-  background-color: #e6e6e6;
-  color: #666;
+  background-color: #2b2b2b;
+  color: #fff;
 }
 .uk-light .uk-button-text,
 .uk-section-primary:not(.uk-preserve-color) .uk-button-text,
