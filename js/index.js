@@ -99,6 +99,12 @@ $(()=>{
             animation: 'slide'
         });
 
+
+        //for change
+       // od.update(value)
+       //  or
+       // el.innerHTML = value
+
         $('.exchange__input').keypress(function(e){
             e.preventDefault();
             od.update($(this).val());
