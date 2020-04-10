@@ -5903,7 +5903,7 @@ ul.uk-nav-sub {
   content: '.';
 }
 :root {
-  --uk-leader-fill-content: .;
+  --uk-leader-fill-content: '.';
 }
 /* ========================================================================
    Component: Iconnav
@@ -12436,6 +12436,11 @@ iframe.uk-cover {
     page-break-after: avoid;
   }
 }
+:root {
+  --background-1: #444;
+  --background-2: #333;
+  --background-3: #222;
+}
 ::-webkit-scrollbar {
   -webkit-appearance: none;
   width: 3px;
@@ -12568,7 +12573,7 @@ iframe.uk-cover {
   width: 16px;
   height: 16px;
   overflow: hidden;
-  border: 1px solid #333;
+  border: 1px solid var(--background-2);
   border-radius: 50%;
 }
 .svg-round-wrapper svg,
@@ -12822,7 +12827,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*='uk-card-media']) .exchange__item,
 .uk-overlay-primary .exchange__item,
 .uk-offcanvas-bar .exchange__item {
-  background-color: #333;
+  background-color: var(--background-2);
 }
 .uk-light .exchange__swap,
 .uk-light .exchange__info,
@@ -12846,7 +12851,7 @@ iframe.uk-cover {
 .uk-overlay-primary .exchange__info,
 .uk-offcanvas-bar .exchange__swap,
 .uk-offcanvas-bar .exchange__info {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--background-1);
 }
 .uk-light .exchange__swap svg,
 .uk-light .exchange__info svg,
@@ -12883,8 +12888,8 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*='uk-card-media']) .exchange__name,
 .uk-overlay-primary .exchange__name,
 .uk-offcanvas-bar .exchange__name {
-  background-color: #444;
-  border-color: #333;
+  background-color: var(--background-1);
+  border-color: var(--background-2);
 }
 .uk-light .exchange__search,
 .uk-section-primary:not(.uk-preserve-color) .exchange__search,
@@ -12912,7 +12917,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*='uk-card-media']) .exchange__list > .uk-active,
 .uk-overlay-primary .exchange__list > .uk-active,
 .uk-offcanvas-bar .exchange__list > .uk-active {
-  background-color: #222;
+  background-color: var(--background-3);
 }
 .uk-light .exchange .uk-dropdown,
 .uk-section-primary:not(.uk-preserve-color) .exchange .uk-dropdown,
@@ -12926,8 +12931,8 @@ iframe.uk-cover {
 .uk-overlay-primary .exchange .uk-dropdown,
 .uk-offcanvas-bar .exchange .uk-dropdown {
   color: rgba(255, 255, 255, 0.7);
-  background: #444;
-  border-color: #333;
+  background: var(--background-1);
+  border-color: var(--background-2);
 }
 .uk-light .uk-button-primary:disabled,
 .uk-section-primary:not(.uk-preserve-color) .uk-button-primary:disabled,
@@ -12940,9 +12945,9 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*='uk-card-media']) .uk-button-primary:disabled,
 .uk-overlay-primary .uk-button-primary:disabled,
 .uk-offcanvas-bar .uk-button-primary:disabled {
-  background-color: #333;
+  background-color: var(--background-2);
   color: #999;
-  border-color: #333;
+  border-color: var(--background-2);
 }
 .uk-light .modal-svg,
 .uk-section-primary:not(.uk-preserve-color) .modal-svg,
@@ -12968,7 +12973,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*='uk-card-media']) .uk-modal-dialog,
 .uk-overlay-primary .uk-modal-dialog,
 .uk-offcanvas-bar .uk-modal-dialog {
-  background: #444;
+  background: var(--background-1);
 }
 @media (max-width: 460px) {
   .uk-logo {
