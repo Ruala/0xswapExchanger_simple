@@ -12533,6 +12533,9 @@ iframe.uk-cover {
 .odometer.odometer-theme-default .odometer-value {
   text-align: center;
 }
+.odometer-formatting-mark ~ .odometer-digit {
+  color: #999;
+}
 :root {
   --background-1: #444;
   --background-2: #333;
@@ -13071,6 +13074,19 @@ iframe.uk-cover {
 .uk-overlay-primary .uk-modal-dialog,
 .uk-offcanvas-bar .uk-modal-dialog {
   background: var(--background-1);
+}
+.uk-light .odometer-formatting-mark ~ .odometer-digit,
+.uk-section-primary:not(.uk-preserve-color) .odometer-formatting-mark ~ .odometer-digit,
+.uk-section-secondary:not(.uk-preserve-color) .odometer-formatting-mark ~ .odometer-digit,
+.uk-tile-primary:not(.uk-preserve-color) .odometer-formatting-mark ~ .odometer-digit,
+.uk-tile-secondary:not(.uk-preserve-color) .odometer-formatting-mark ~ .odometer-digit,
+.uk-card-primary.uk-card-body .odometer-formatting-mark ~ .odometer-digit,
+.uk-card-primary > :not([class*='uk-card-media']) .odometer-formatting-mark ~ .odometer-digit,
+.uk-card-secondary.uk-card-body .odometer-formatting-mark ~ .odometer-digit,
+.uk-card-secondary > :not([class*='uk-card-media']) .odometer-formatting-mark ~ .odometer-digit,
+.uk-overlay-primary .odometer-formatting-mark ~ .odometer-digit,
+.uk-offcanvas-bar .odometer-formatting-mark ~ .odometer-digit {
+  color: rgba(255, 255, 255, 0.5);
 }
 @media (max-width: 460px) {
   .uk-logo {
