@@ -5137,7 +5137,7 @@ ul.uk-nav-sub {
   /* 4 */
   padding: 15px 15px;
   /* 5 */
-  background: rgba(0, 0, 0, 0.6);
+  background: transparent;
   /* 6 */
   opacity: 0;
   transition: opacity 0.15s linear;
