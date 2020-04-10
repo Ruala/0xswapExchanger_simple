@@ -87,14 +87,22 @@ $(()=>{
         });
     })();
 
-    //numberAnimate for test
-    // (() => {
-    //     const $target = $('.number-animate');
-    //     $target.numberAnimate();
-    //
-    //     $('.exchange__input').keypress(function(e){
-    //         e.preventDefault();
-    //         $target.numberAnimate('set', $(this).val());
-    //     });
-    // })();
+    //odometer for test
+    (() => {
+        const target = document.querySelector('.number-animate');
+
+        const od = new Odometer({
+            el: target,
+            value: target.innerHTML,
+            format: '(ddd).dddddddddd',
+            theme: 'default',
+            animation: 'slide'
+        });
+
+        $('.exchange__input').keypress(function(e){
+            e.preventDefault();
+            od.update($(this).val());
+        });
+    })();
 });
+
