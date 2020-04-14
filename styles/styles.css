@@ -12466,14 +12466,14 @@ iframe.uk-cover {
 .odometer.odometer-auto-theme .odometer-digit .odometer-digit-inner,
 .odometer.odometer-theme-default .odometer-digit .odometer-digit-inner {
   text-align: left;
-  display: flex;
-  align-items: center;
+  display: block;
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 0;
   right: 0;
-  bottom: 0;
   overflow: hidden;
+  height: 14px;
+  transform: translateY(-50%);
 }
 .odometer.odometer-auto-theme .odometer-digit .odometer-ribbon,
 .odometer.odometer-theme-default .odometer-digit .odometer-ribbon {
