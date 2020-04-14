@@ -12807,6 +12807,13 @@ iframe.uk-cover {
 .exchange__list > .uk-active {
   background-color: #ddd;
 }
+.exchange__rate {
+  display: inline-flex;
+  align-items: center;
+}
+.exchange__rate .number-animate {
+  margin: 0 5px;
+}
 .modal-svg {
   fill: #666;
 }
