@@ -12439,7 +12439,7 @@ iframe.uk-cover {
 .odometer.odometer-auto-theme,
 .odometer.odometer-theme-default {
   display: inline-block;
-  vertical-align: text-bottom;
+  vertical-align: middle;
   *vertical-align: auto;
   *zoom: 1;
   *display: inline;
